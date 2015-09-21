@@ -7,7 +7,7 @@ var mysql = require('mysql');
 var $conf = require('../conf/db');
 var $util = require('../utils/util');
 var $sql = {
-    postResult: 'insert into game (type) values (?)',
+    postResult: 'insert into game (ip,type) values (?,?)',
     getAllAmount: 'select count(id) as count from game',
     getTypeAmount: 'select type, count(id) count from game group by type'
 };
@@ -17,11 +17,11 @@ var pool = mysql.createPool($util.extend({}, $conf.mysql));
 router.post('/postResult', function(req, res, next){
     pool.getConnection(function(err, connection) {
         var param = req.body;
-        if(param.type == null){
+        if(param.type == null || param.ip == null){
             $util.json(res, undefined);
             return;
         }
-        connection.query($sql.postResult, [param.type], function(err, result){
+        connection.query($sql.postResult, [param.ip, param.type], function(err, result){
             if(result){
                 result = {
                     code: 200,

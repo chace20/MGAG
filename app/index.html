@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" ng-app="mgagApp">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M.G.M.A</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  
+  <div ng-view class="div-content"></div>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="step1/step1.js"></script>
+  <script src="step2/step2.js"></script>
+  <script src="step3/step3.js"></script>
+  <script src="step4/step4.js"></script>
 </body>
 </html>

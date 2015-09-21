@@ -1,0 +1,114 @@
+body {
+    font-family: "Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+    background-color: #005DBC;
+    color:#f0f0f0;
+}
+
+.title-step {
+    font-size: 1.2em;
+}
+
+.div-content {
+    width:90%;
+    height:90%;
+    margin:auto auto;
+    padding: 100px 0;
+}
+
+.div-center {
+    padding:50px 0;
+    text-align: center;
+    clear: right;
+}
+
+.btn-next {
+    width: 20%;
+    min-width: 80px;
+    min-width: 100px;
+    height: 35px;
+    float: right;
+    border-radius: 4px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #005DBC;
+    font-size: 16px;
+    font-weight: bold;
+    clear: both;
+}
+
+.btn-next:active{
+    width: 20%;
+    min-width: 80px;
+    min-width: 100px;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    opacity: 0.8;
+    background-color: #f0f0f0;
+    color: #005DBC;
+    font-size: 16px;
+    font-weight: bold;
+    clear: both;
+}
+
+/*step1*/
+.p-amount {
+    font-size: 14px;
+}
+
+.input-ip {
+    width: 80%;
+    min-width: 300px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.5em;
+    color: #f0f0f0;
+}
+
+/*step2*/
+.div-engine {
+    width: 40%;
+    height: 150px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.div-engine-selected {
+    width: 40%;
+    height: 150px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+}
+
+#unity {
+    float: left;
+}
+#cocos {
+    float: right;
+}
+
+.img-engine {
+    width: 50%;
+    height: 50%;
+}
+
+/*step3*/
+.btn-img-pre {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.btn-img-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
