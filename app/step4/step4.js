@@ -14,6 +14,16 @@ angular.module('mgagApp.step4', ['ngRoute'])
 .controller('step4Ctrl', function($scope, $http, shareFactory) {
     $scope.ip = shareFactory.getIP();
     $scope.type = shareFactory.getType();
+
+    $scope.select = function(event){
+        if($(event.target).attr('class') == 'div-platform'){
+            $(event.target).attr('class', 'div-platform-selected');
+        }else if($(event.target).attr('class') == 'div-platform-selected') {
+            $(event.target).attr('class', 'div-platform');
+        }
+    };
+
+
     //提交
     $scope.submit = function() {
         $http.post('/api/postResult', {

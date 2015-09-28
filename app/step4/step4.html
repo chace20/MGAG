@@ -1,3 +1,13 @@
-<p>type -- {{type}}</p>
-<p>ip -- {{ip}}</p>
-<button ng-click="submit()">生成游戏</button>
+<h1 class="title-step">第四步：选择游戏平台</h1>
+<div class="div-center">
+    <div id="ios" ng-click="select($event)" class="div-platform-selected">
+        <i class="flaticon-apple19"></i>
+    </div>
+    <div id="android" ng-click="select($event)" class="div-platform">
+        <i class="flaticon-system1"></i>
+    </div>
+    <div id="wp" ng-click="select($event)" class="div-platform">
+        <i class="flaticon-operatingsystem"></i>
+    </div>
+</div>
+<button ng-click="submit()" class="btn-next">生成游戏</button>
