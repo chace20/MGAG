@@ -1,0 +1,53 @@
+<h1 class="title-step">第三步：选择游戏类型</h1>
+<div class="div-center">
+            <div class="Wallop Wallop--slide content-wallop">
+              <div class="Wallop-list">
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[0].count || 0}}</p>
+                  <img src="images/1.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[1].count || 0}}</p>
+                  <img src="images/2.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[2].count || 0}}</p><img src="images/3.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[3].count || 0}}</p>
+                  <img src="images/4.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[4].count || 0}}</p>
+                  <img src="images/5.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[5].count || 0}}</p>
+                  <img src="images/6.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[6].count || 0}}</p>
+                  <img src="images/7.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[7].count || 0}}</p>
+                  <img src="images/8.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[8].count || 0}}</p>
+                  <img src="images/9.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[9].count || 0}}</p>
+                  <img src="images/10.png"></div>
+                <div class="Wallop-item">
+                  <p>热度：{{typeCountList[10].count || 0}}</p>
+                  <img src="images/11.png"></div>
+              </div>
+            <i class="iconfont Wallop-buttonPrevious btn-img-pre">&#xe688</i>
+              <i class="iconfont Wallop-buttonNext btn-img-next">&#xe613</i>
+            </div>
+</div>
+<button ng-click="next()" class="btn-next">下一步</button>
+
+<link rel="stylesheet" href="bower_components/wallop/css/wallop.css">
+<link rel="stylesheet" href="bower_components/wallop/css/wallop--slide.css">
+<script src="bower_components/wallop/js/Wallop.js"></script>
+<script>
+  var wallopEl = document.querySelector('.Wallop');
+  var slider = new Wallop(wallopEl);
+  slider.on('change', function(event){
+    angular.element('.Wallop').scope().type = event.detail.currentItemIndex;
+  });
+</script>   

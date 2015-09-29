@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MGAG</title>
+  <link rel="stylesheet" href="generating.css">
+  <link rel="stylesheet" href="components/progress/css/progress.css">
+</head>
+<body>
+<h1>生成需要一定时间，请坐和放宽</h1>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="components/progress/js/jquery-asPieProgress.min.js"></script>
+<div class="content-progress">
+<div class="pie_progress" role="progressbar" data-goal="100" data-barcolor="#FFF" data-trackcolor="#669ED7" data-barsize="20" >
+        <span class="pie_progress__number">0%</span>
+</div>
+</div>
+<script>
+    $(".pie_progress").asPieProgress({
+    namespace: 'pie_progress',
+    speed: 500, // refresh speed
+    delay: 3000, //延迟
+    easing: 'linear',
+    numberCallback: function(n){
+        if(n == 100){
+        window.location.href = 'success.html';
+        }
+        return n + '%';
+    }
+});
+    $(".pie_progress").asPieProgress('start');
+</script>
+</body>
+</html>
