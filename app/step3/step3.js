@@ -16,7 +16,7 @@ angular.module('mgagApp.step3', ['ngRoute'])
     $scope.typeCountList;
     //11 kinds
 
-    $http.get('/api/getTypeAmount')
+    $http.get('/mgag/api/getTypeAmount')
         .then(function(res) {
                 $scope.typeCountList = res.data;
             },

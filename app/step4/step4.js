@@ -26,7 +26,7 @@ angular.module('mgagApp.step4', ['ngRoute'])
 
     //提交
     $scope.submit = function() {
-        $http.post('/api/postResult', {
+        $http.post('/mgag/api/postResult', {
             ip: $scope.ip,
             type: $scope.type
         })
