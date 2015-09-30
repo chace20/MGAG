@@ -15,7 +15,7 @@ angular.module('mgagApp.step1', ['ngRoute'])
     $scope.ip;
     $scope.allAmount = '?';
 
-    $http.get('/api/getAllAmount')
+    $http.get('/mgag/api/getAllAmount')
         .then(function(res) {
                 $scope.allAmount = res.data.count;
             },
