@@ -36,7 +36,7 @@ angular.module('mgagApp.step4', ['ngRoute'])
                             window.location.href = '#/step1';
                         }
                     }else{
-                        window.location.href = 'mgag/generating.html';
+                        window.location.href = 'generating.html';
                     }
                 },
                 function(err) {
